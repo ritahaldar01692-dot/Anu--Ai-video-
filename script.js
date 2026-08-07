@@ -4,22 +4,21 @@ const status = document.getElementById("status");
 btn.addEventListener("click", async () => {
   const image = document.getElementById("image").files[0];
   const script = document.getElementById("script").value.trim();
-  const voice = document.getElementById("voice").value;
 
   if (!image) {
-    status.innerText = "❌ Please select an image.";
+    status.innerText = "❌ প্রথমে একটি ছবি নির্বাচন করুন।";
     return;
   }
 
   if (!script) {
-    status.innerText = "❌ Please enter a script.";
+    status.innerText = "❌ প্রথমে একটি স্ক্রিপ্ট লিখুন।";
     return;
   }
 
-  status.innerText = "⏳ Generating video...";
+  status.innerText = "🤖 Gemini AI স্ক্রিপ্ট উন্নত করছে...";
 
   setTimeout(() => {
-    status.innerHTML =
-      "✅ Demo complete!<br><br>Real AI video generation requires connecting an AI Video API (Runway, Pika, Kling, Luma, etc.).";
-  }, 3000);
+    status.innerText =
+      "✅ Gemini AI প্রস্তুত। পরের ধাপে API যুক্ত করলে এটি সত্যিই AI দিয়ে স্ক্রিপ্ট উন্নত করবে।";
+  }, 2000);
 });
